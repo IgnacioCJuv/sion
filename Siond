@@ -1,0 +1,60 @@
+#  Desarrolle un algoritmo que pida al usuario ingresar un número entero positivo mayor a cero. 
+# El programa debe validar el número
+# ingresado. Si el número ingresado no es válido, 
+# el algoritmo debe indicar el error y volver a solicitarlo.
+# Una vez que se obtiene un número válido, el programa debe examinar 
+# cada dígito del número y determinar la suma de los dígitos
+# pares y la suma de los dígitos impares. 
+# Finalmente, el programa debe mostrar dichas cantidades. 
+
+# Funciones a desarrollar:
+# Validar que sea número entero positivo.
+# Saber si es par o impar.
+# Procesar el número. Mostrar la suma de dígitos pares y la suma de los dígitos impares.
+
+def Leer_numero_valido () -> int:
+    noValido = bool # verdadero y falso 
+    numero = int 
+    
+    noValido= True # cuando noValido sea verdadero el programa pasa por el while (el ciclo)
+    while noValido: 
+        try : 
+            numero = int(input("ingrese el numero valido: "))
+            if numero > 0: 
+                noValido = False 
+            else: 
+                print("El numero es invalido")
+        except: 
+            print("El dato ingresado es incorrecto")
+
+    return numero
+
+def es_par (numero: int) -> bool:
+    resto : int 
+    resto = numero % 2 
+    if resto == 0 :
+        return True
+    else: 
+        return True
+
+def procesar_numero(numero: int):
+    digito : int 
+    suma_par: int 
+    suma_impar: int 
+    suma_par = 0 
+    suma_impar = 0
+
+    while numero > 0 :
+        digito = numero % 10 
+        if es_par (digito):
+            suma_par = suma_par + digito 
+        else: 
+            suma_impar = suma_impar + digito
+        numero = numero // 10 
+
+    print("suma par: ", suma_par)
+    print("suma impar: ", suma_impar)
+
+numero = int 
+numero = Leer_numero_valido()
+procesar_numero(numero)
