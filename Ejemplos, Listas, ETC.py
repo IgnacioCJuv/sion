@@ -83,3 +83,18 @@ print(len(empresas))
   print(empresas)
   empresas.sort()  #ordena acendente y si se define puede ordenar decendente
   print(empresas)
+
+
+
+
+
+lista = [""] # el largo de una lista que su unico elemento es vacio es 1, el largo de una lista vacia es 0
+
+print(lista[len(lista) - 1])
+
+
+lista = [""]
+a E A # a pertenece a A
+a in A
+print(lista[len(lista) - 1])
+set
