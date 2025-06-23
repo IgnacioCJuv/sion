@@ -98,3 +98,7 @@ a E A # a pertenece a A
 a in A
 print(lista[len(lista) - 1])
 set
+
+
+#ver elemento único de la lista
+[z. = x(y -n)]
